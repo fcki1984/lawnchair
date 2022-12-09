@@ -24,6 +24,7 @@ import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import app.lawnchair.font.FontCache
 import app.lawnchair.gestures.config.GestureHandlerConfig
+import app.lawnchair.hotseat.HotseatMode
 import app.lawnchair.icons.CustomAdaptiveIconDrawable
 import app.lawnchair.icons.shape.IconShape
 import app.lawnchair.icons.shape.IconShapeManager
@@ -76,23 +77,25 @@ class PreferenceManager2(private val context: Context) : PreferenceManager {
         defaultValue = context.resources.getBoolean(R.bool.config_default_dark_status_bar),
     )
 
-    val hotseatQsb = preference(
-        key = booleanPreferencesKey(name = "dock_search_bar"),
-        defaultValue = context.resources.getBoolean(R.bool.config_default_dock_search_bar),
+    val hotseatMode = preference(
+        key = stringPreferencesKey("hotseat_mode"),
+        defaultValue = HotseatMode.fromString(context.getString(R.string.config_default_hotseat_mode)),
+        parse = { HotseatMode.fromString(it) },
+        save = { it.toString() },
         onSet = { reloadHelper.restart() },
     )
 
     val iconShape = preference(
         key = stringPreferencesKey(name = "icon_shape"),
-        defaultValue = IconShape.fromString(context.getString(R.string.config_default_icon_shape)) ?: IconShape.Circle,
-        parse = { IconShape.fromString(it) ?: IconShapeManager.getSystemIconShape(context) },
+        defaultValue = IconShape.fromString(value = context.getString(R.string.config_default_icon_shape), context = context) ?: IconShape.Circle,
+        parse = { IconShape.fromString(value = it, context = context) ?: IconShapeManager.getSystemIconShape(context) },
         save = { it.toString() },
     )
 
     val customIconShape = preference(
         key = stringPreferencesKey(name = "custom_icon_shape"),
         defaultValue = null,
-        parse = { IconShape.fromString(it) ?: IconShapeManager.getSystemIconShape(context) },
+        parse = { IconShape.fromString(value = it, context = context) ?: IconShapeManager.getSystemIconShape(context) },
         save = { it.toString() },
         onSet = { it?.let(iconShape::setBlocking) },
     )
