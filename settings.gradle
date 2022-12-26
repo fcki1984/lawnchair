@@ -2,6 +2,7 @@ pluginManagement {
     repositories {
         google()
         gradlePluginPortal()
+        maven { url "https://storage.googleapis.com/r8-releases/raw"}
     }
     resolutionStrategy {
         eachPlugin {
@@ -11,11 +12,17 @@ pluginManagement {
             }
         }
     }
+    buildscript {
+        dependencies {
+            // https://issuetracker.google.com/issues/262661471
+            classpath("com.android.tools:r8:4.0.47")
+        }
+    }
 }
 
 // https://docs.gradle.com/enterprise/gradle-plugin/
 plugins {
-    id "com.gradle.enterprise" version "3.12"
+    id "com.gradle.enterprise" version "3.12.1"
 }
 
 gradleEnterprise {
