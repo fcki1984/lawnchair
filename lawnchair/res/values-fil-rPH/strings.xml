@@ -43,16 +43,16 @@
     <string name="experimental_features_label">Features (Eksperimento)</string>
     <!-- ExperimentalFeaturesPreferences -->
     <!-- <string name="experimental_features_label" />-->
-    <string name="font_picker_label">Font Customization</string>
+    <string name="font_picker_label">Pag-customize ng Font</string>
     <string name="font_picker_description">Ang ibang tektso ay hindi magbabago.</string>
     <string name="smartspace_calendar_label">Calendar Customization ng At a Glance</string>
-    <string name="smartspace_calendar_description">Allow showing date in non-Gregorian calendar systems.</string>
+    <string name="smartspace_calendar_description">Payagan ang pagpapakita ng petsa sa mga sistema ng kalendaryong hindi Gregorian.</string>
     <string name="workspace_increase_max_grid_size_label">Increased Max Home Screen Grid Size</string>
-    <string name="workspace_increase_max_grid_size_description">Increase the max allowed Home Screen grid size from 10 x 10 to 20 x 20.</string>
+    <string name="workspace_increase_max_grid_size_description">Taasan sa max ang pinapayagang laki ng grid ng Home Screen mula 10 x 10 hanggang 20 x 20.</string>
     <string name="always_reload_icons_label">Palaging I-reload Ang Mga Icon</string>
-    <string name="always_reload_icons_description">Avoid using cached icons from icon packs</string>
+    <string name="always_reload_icons_description">Iwasang gumamit ng mga naka-cache na icon mula sa mga icon pack</string>
     <string name="transparent_background_icons">Transparent Themed Icons</string>
-    <string name="transparent_background_icons_description">Use transparent background on themed icons</string>
+    <string name="transparent_background_icons_description">Gumamit ng transparent na background sa themed icons</string>
     <string name="smartspace_mode_selection">At a Glance Provider selection</string>
     <!-- GeneralPreferences -->
     <string name="home_screen_rotation_label">Pag-iikot ng Home Screen</string>
@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Icon Pack</string>
+    <string name="themed_icon_pack">Themed Icon Source</string>
     <string name="system_icons">Icons ng System</string>
     <string name="themed_icon_title">Mga Icon na may tema</string>
     <string name="themed_icons_off_label">Patayin</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">Awtomatikong Ipakita ang Keyboard</string>
     <string name="fuzzy_search_title">Fuzzy Search</string>
     <string name="fuzzy_search_desc">Tinatayang tugma ng app searches.</string>
+    <string name="max_search_result_count_title">Max Search Result Count</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Mga Haligi ng Drawer ng App</string>
     <string name="row_height_label">Taas ng hilera</string>
@@ -356,7 +358,6 @@
     <string name="label">Label</string>
     <string name="hide_from_drawer">Itago mula sa App Drawer</string>
     <string name="suggestion_pref_screen_title">Mga mungkahi</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Ulat sa Lawchair Bug</string>
     <string name="crash_report_notif_title">Nag-crash ang %1$s</string>

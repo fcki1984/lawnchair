@@ -53,7 +53,7 @@ import kotlinx.serialization.json.Json
 import app.lawnchair.preferences.PreferenceManager as LawnchairPreferenceManager
 import com.android.launcher3.graphics.IconShape as L3IconShape
 
-class PreferenceManager2(private val context: Context) : PreferenceManager {
+class PreferenceManager2 private constructor(private val context: Context) : PreferenceManager {
 
     private val scope = MainScope()
     private val resourceProvider = DynamicResource.provider(context)
@@ -297,6 +297,11 @@ class PreferenceManager2(private val context: Context) : PreferenceManager {
     val enableFuzzySearch = preference(
         key = booleanPreferencesKey(name = "enable_fuzzy_search"),
         defaultValue = context.resources.getBoolean(R.bool.config_default_enable_fuzzy_search),
+    )
+
+    val maxSearchResultCount = preference(
+        key = intPreferencesKey(name = "max_search_result_count"),
+        defaultValue = resourceProvider.getInt(R.dimen.config_default_search_max_result_count),
     )
 
     val enableSmartspace = preference(

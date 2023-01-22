@@ -104,6 +104,7 @@
     <!-- IconPackPreferences -->
     <!-- <string name="icon_style" /> -->
     <string name="icon_pack">Ikoncsomag</string>
+    <string name="themed_icon_pack">Tematikus ikon forrás</string>
     <string name="system_icons">Rendszerikonok</string>
     <string name="themed_icon_title">Témázott ikonok</string>
     <string name="themed_icons_off_label">Kikapcsolás</string>
@@ -209,7 +210,7 @@
     <string name="accessibility_smartspace_page">Oldal %1$d a %2$d-ból</string>
     <string name="smartspace_widget">At a Glance</string>
     <string name="smartspace_widget_description">Mit mutasson</string>
-    <string name="smartspace_widget_placeholder_date">Péntek, Március 3</string>
+    <string name="smartspace_widget_placeholder_date">Péntek, március 3.</string>
     <string name="preview_label">Előnézet</string>
     <string name="smartspace_calendar">Naptár</string>
     <string name="smartspace_date_and_time">Dátum &amp; Idő</string>
@@ -265,6 +266,7 @@
     <string name="pref_search_auto_show_keyboard">Billentyűzet automatikus mutatása</string>
     <string name="fuzzy_search_title">Közelítő keresés</string>
     <string name="fuzzy_search_desc">Hozzávetőleges egyezés az alkalmazások kereséséhez.</string>
+    <string name="max_search_result_count_title">Max keresési eredmények száma</string>
     <!-- <string name="grid" /> -->
     <string name="app_drawer_columns">Alkalmazástár oszlopai</string>
     <string name="row_height_label">Sor magasság</string>
@@ -356,7 +358,6 @@
     <string name="label">Címke</string>
     <string name="hide_from_drawer">Elrejtés az alkalmazásfiókban</string>
     <string name="suggestion_pref_screen_title">Javaslatok</string>
-    <string name="n_percent">%1$d%%</string>
     <!-- Bug reporting -->
     <string name="lawnchair_bug_report">Lawnchair hibajelentés</string>
     <string name="crash_report_notif_title">%1$s összeomlott</string>
